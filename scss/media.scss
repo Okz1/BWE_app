@@ -1,0 +1,231 @@
+$primary-color: #17324c;
+$oushen-color: #1bdcd1;
+$text-color: #2d4052;
+$border-color: #bfcfde;
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+		.line{
+		 &:nth-child(2), &:nth-child(4){
+            display: none;
+      }
+ 		}
+		.about{
+		.slick-dots li button{
+			background-color: #fff;
+ 		}
+ 	 	.slick-dots{
+ 			top: 485px;
+ 			left:-10px;
+		}
+	}
+	// .feed-item .img-wrap{
+	// 	bottom: 62%;
+	// }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.line{
+ 		 &:nth-child(2), &:nth-child(4){
+            display: none;
+      }
+	}
+	.header-main{
+		min-height: 550px;
+ 		height: calc(95vh - 50px);
+		.header-margin{
+	 			text-align: center;
+	 			margin-top:70px;
+	 	}
+ 		.header-title{
+ 			font-size: 50px;
+ 		}
+ 		.header-subtitle{
+ 			font-size: 1.8rem;
+ 		}
+	}
+	.about{
+		.slick-dots li button{
+			background-color: #fff;
+ 		}
+ 	 	.slick-dots{
+ 			top: 485px;
+ 			left:-10px;
+		}
+	}
+	.nav{
+ 		position: fixed;
+ 		top: 0;
+ 		opacity: .7;
+ 		padding-top: 10px;
+ 		padding-bottom: 10px;
+ 		.nav-social{
+ 			display: none;
+ 		}
+ 		.nav-logo{
+ 			.power-text{
+				display: none;
+			}
+		}
+ 	}
+ 	.services{
+		flex-direction: column;
+		border-collapse: collapse;
+		border: 2px solid $border-color;
+		.services-items{
+			width: 100%;
+			ul{
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				flex-wrap: wrap;
+				li{
+					width: 50%;
+				}
+			}
+		}
+	}
+	.quote .quote-block h2{
+		font-size: 1.9rem;
+	}
+	.nav-bar{
+		display: none;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.header-main .btn-wrap{
+		margin-top: 50px;
+	}
+	
+	.quote .quote-block h2{
+		font-size: 1.4rem;
+	}
+	.header-main{
+		.header-title{
+			font-size: 45px;
+		}
+	}
+		.feed-item .img-wrap{
+			bottom: 51%;
+		}
+	footer .otakoyi{
+		.otakoyi-text{
+			display: none;
+		}
+	}
+
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.nav{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+.quote .quote-block h2{
+		font-size: 2rem;
+	}
+	.header-main{
+		.header-title{
+			font-size: 1.7rem;
+		}
+		.btn-wrap{
+			margin-top: 40px;
+		}
+	}
+	.feed-item .img-wrap{
+		bottom: 57%;
+	}
+	.services{
+		flex-direction: column;
+		border-collapse: collapse;
+		border: 2px solid $border-color;
+		.services-items{
+			width: 100%;
+		
+			ul{
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				li{
+					width: 100%;
+				}
+			}
+		}
+	}
+	footer .otakoyi{
+		.otakoyi-text{
+			display: none;
+		}
+	}
+	.btn-scroll{
+		bottom: 25px;
+		right: 25px;
+	}
+	.servis-descr{
+		p{
+			font-size: .9rem;
+		}
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

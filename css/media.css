@@ -1,0 +1,153 @@
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1199px) {
+  .line:nth-child(2), .line:nth-child(4) {
+    display: none; }
+  .about .slick-dots li button {
+    background-color: #fff; }
+  .about .slick-dots {
+    top: 485px;
+    left: -10px; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .line:nth-child(2), .line:nth-child(4) {
+    display: none; }
+  .header-main {
+    min-height: 550px;
+    height: -webkit-calc(95vh - 50px);
+    height: calc(95vh - 50px); }
+    .header-main .header-margin {
+      text-align: center;
+      margin-top: 70px; }
+    .header-main .header-title {
+      font-size: 50px; }
+    .header-main .header-subtitle {
+      font-size: 1.8rem; }
+  .about .slick-dots li button {
+    background-color: #fff; }
+  .about .slick-dots {
+    top: 485px;
+    left: -10px; }
+  .nav {
+    position: fixed;
+    top: 0;
+    opacity: .7;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    .nav .nav-social {
+      display: none; }
+    .nav .nav-logo .power-text {
+      display: none; }
+  .services {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-collapse: collapse;
+    border: 2px solid #bfcfde; }
+    .services .services-items {
+      width: 100%; }
+      .services .services-items ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        width: 100%;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; }
+        .services .services-items ul li {
+          width: 50%; }
+  .quote .quote-block h2 {
+    font-size: 1.9rem; }
+  .nav-bar {
+    display: none; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .header-main .btn-wrap {
+    margin-top: 50px; }
+  .quote .quote-block h2 {
+    font-size: 1.4rem; }
+  .header-main .header-title {
+    font-size: 45px; }
+  .feed-item .img-wrap {
+    bottom: 51%; }
+  footer .otakoyi .otakoyi-text {
+    display: none; }
+  /*Disable Animation on Mobile Devices*/
+  .animated {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    animation: none !important; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .nav {
+    padding-left: 25px;
+    padding-right: 25px; }
+  .quote .quote-block h2 {
+    font-size: 2rem; }
+  .header-main .header-title {
+    font-size: 1.7rem; }
+  .header-main .btn-wrap {
+    margin-top: 40px; }
+  .feed-item .img-wrap {
+    bottom: 57%; }
+  .services {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-collapse: collapse;
+    border: 2px solid #bfcfde; }
+    .services .services-items {
+      width: 100%; }
+      .services .services-items ul {
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        .services .services-items ul li {
+          width: 100%; }
+  footer .otakoyi .otakoyi-text {
+    display: none; }
+  .btn-scroll {
+    bottom: 25px;
+    right: 25px; }
+  .servis-descr p {
+    font-size: .9rem; } }
+
+/* Custom, iPhone Retina */
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */

@@ -1,0 +1,695 @@
+
+//================Fonts=============================//
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../fonts/ProximaNova-Regular/ProximaNova-Regular.eot');
+    src: url('../fonts/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Regular/ProximaNova-Regular.woff2') format('woff2'),
+    url('../fonts/ProximaNova-Regular/ProximaNova-Regular.woff') format('woff'),
+    url('../fonts/ProximaNova-Regular/ProximaNova-Regular.ttf') format('truetype'),
+    url('../fonts/ProximaNova-Regular/ProximaNova-Regular.svg#ProximaNova-Regular/ProximaNova-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Light';
+    src: url('../fonts/ProximaNova-Light/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Light/ProximaNova-Light.otf') format('opentype'),
+    url('../fonts/ProximaNova-Light/ProximaNova-Light.woff') format('woff'),
+    url('../fonts/ProximaNova-Light/ProximaNova-Light.ttf') format('truetype'),
+    url('../fonts/ProximaNova-Light/ProximaNova-Light.svg#ProximaNova-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('../fonts/ProximaNova-Bold/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Bold/ProximaNova-Bold.otf') format('opentype'),
+    url('../fonts/ProximaNova-Bold/ProximaNova-Bold.woff') format('woff'),
+    url('../fonts/ProximaNova-Bold/ProximaNova-Bold.ttf') format('truetype'),
+    url('../fonts/ProximaNova-Bold/ProximaNova-Bold.svg#ProximaNova-Bold/ProximaNova-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0');
+    src: url('../fontsfontawesome//fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+    url('../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+    url('../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+    url('../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+    url('../fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$primary-color: #17324c;
+$oushen-color: #1bdcd1;
+$text-color: #2d4052;
+$border-color: #bfcfde;
+
+.nav-bar-link{
+    font-size: 1.8rem;
+    color: #fff;
+}
+html,body{
+	font-size: 16px;
+	font-family: 'ProximaNova-Light', sans-serif;
+	min-width:320px;
+	margin: 0;
+	padding: 0;
+	color: $text-color;
+    overflow-x: hidden;
+}
+
+    
+    .line{
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        opacity: .15;
+        background: #fff;
+        &:nth-child(1){
+            top: 0;
+            left: 20%;
+            bottom: 0;
+        }
+        &:nth-child(2){
+            top: 0;
+            left: 35%;
+            bottom: 0;
+        }
+        &:nth-child(3){
+            top: 0;
+            left: 50%;
+            bottom: 0;
+        }
+        &:nth-child(4){
+            top: 0;
+            left: 65%;
+            bottom: 0;
+        }
+         &:nth-child(5){
+            top: 0;
+            left: 80%; 
+            bottom: 0;       
+        }
+    }
+
+
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+#nav_bar{
+    &:before{
+        display: none;
+    }
+    &:after{
+        display: none;
+    }
+}
+
+.header-main{
+    position: relative;
+    min-height: 800px;
+    height: calc(100vh - 50px);
+	background: $primary-color url("../img/header.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+    text-align: center;
+	.header-title{
+        font-family: "ProximaNova-Bold";
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		font-size: 70px;
+		margin: 0;
+		text-align: center;
+        &::before{
+            content: '';
+            display: block;
+            background: url("../img/power.png");
+            z-index: 3;
+            width: 65px;
+            height: 65px;
+            margin: 0 auto;
+            margin-bottom: 70px;
+        }
+	}
+	.header-subtitle{
+        margin-top: 10px;
+		text-align: center;
+		font-size: 2rem;
+	}
+    .btn-wrap{
+        display: inline-block;
+        margin-top: 90px;
+        a{
+            color: #fff;
+            text-transform: uppercase;
+            display: block;
+            width: 246px;
+            padding: 25px 0;
+            background-color: $primary-color;
+            opacity: .65;
+            border-bottom: 2px solid $oushen-color;
+            text-decoration: none;
+            transition: all .25s;
+            &:hover{
+                text-decoration: none;
+                background-color: #132b42;
+            }
+        }
+    }
+    .header-margin{
+        margin-top: 170px;
+    }	
+}
+
+.nav-bar-mobile{
+    list-style-type: none;
+    font-size: 1.5rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    width: 100%;
+    // height: 40vh;
+    justify-content: center;
+    align-items: center;
+    background: $primary-color;
+    color: #fff;
+    opacity: 1;
+    margin: 0; 
+    z-index: 999;
+    transition: all .5s;
+    padding: 10px;
+    .nav-item{
+        margin-top: 10px;
+        a{ 
+            z-index: 999;
+            color: #fff;
+            text-decoration: none;
+            &:hover{
+                color: $oushen-color;
+            }
+        }
+    }
+}
+
+.close{
+    position: fixed;
+    color:#fff;
+    top: 10px;
+    right: 45px;
+    margin: 0;
+    font-size: 3rem;
+    z-index: 99999;
+}
+
+
+
+.nav{
+    width: 100%;
+    font-family: "ProximaNova-Bold";
+    background-color: $primary-color;
+    color:$oushen-color;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    &-bar{
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        .nav-item{
+          a{
+            display: block;
+            padding: 15px;
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+            &:hover{
+                background-color: #3d5a76;
+                color:$oushen-color;
+                text-decoration: none;
+            }
+            &:visited{
+                text-decoration: none;
+            }
+            &:active{
+                text-decoration: none;
+            }
+          }  
+        }
+    }
+    &-social{
+        a{
+            color:$oushen-color;
+            &:hover{
+                color: #fff;
+            }
+            i{
+                margin-right: 10px;
+            }
+        }  
+    }
+    .nav-logo{
+        display: flex;
+        align-items: center;
+        z-index: 99999;
+    }
+    span{
+       display: inline-block;
+        text-transform: capitalize;
+    &.power-logo{
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        background: url(../img/power.png) no-repeat;
+        background-size: cover;
+        display: inline-block; 
+    }
+    }
+}
+.servis{
+    padding: 70px 0 100px 0;
+}
+.servis-descr{
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    &::before{
+        text-align: center;
+        display: inline-block;
+        content: '';
+        width: 50px;
+        height: 5px;
+        background:$oushen-color;
+    }
+    h2{
+        text-transform: uppercase;
+        font-family: 'ProximaNova-Bold';
+        font-size: 40px;
+        color: $primary-color;
+        }
+    p{
+        font-size: 22px;
+    }
+}
+
+.services{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    &-items{
+        padding-bottom: 50px;
+        width: 33%;
+        flex-wrap: wrap;
+        border: 1px solid $border-color;
+        &:nth-child(2){
+            border-right: none;
+            border-left: none;
+        }
+    }
+    h3{
+        font-family: 'ProximaNova-Bold';
+        font-size: 22px;
+        padding-left: 23px;
+        margin: 50px 0;
+    }
+    ul{
+        list-style-type: none;
+        padding-left: 25px;
+        li{
+            margin-bottom: 5px;
+            &::before{
+                display: inline-block;
+                content: '';
+                background-color: $oushen-color;
+                width: 6px;
+                height: 6px;
+                border-radius: 10em;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+// .services-items{
+//     &:hover{
+//         &::nth-child(1){
+//             background: #838d97 url("../img/service-1.png") center;
+//             background-size: cover;
+
+//         }
+//     }
+// }
+
+.services-items:hover:nth-child(1){
+    background: #838d97 url("../img/service-1.png") center;
+    background-size: cover;
+    color: #fff;
+    cursor: pointer;
+}
+.services-items:hover:nth-child(2){
+    background: #838d97 url("../img/service-2.png") center;
+    background-size: cover;
+    color: #fff;
+    cursor: pointer;
+}
+.services-items:hover:nth-child(3){
+    background: #838d97 url("../img/service-3.png") center;
+    background-size: cover;
+    color: #fff;
+    cursor: pointer;
+}
+
+.about{
+    position: relative;
+    font-family: 'ProximaNova-Light';
+    background: #273b4d;
+    color: #fff;
+    padding: 64px 0 75px 0;
+    .servis-descr{
+        h2{
+            color: #fff;
+            margin-bottom: 65px;
+        }
+    }
+    .paragraf-wrap{
+        color: #fff;
+        span{
+            display: block;
+            color:$oushen-color;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+    }
+    .carusel{
+        position: relative;
+        .slick-arrow{
+            z-index: 5;
+            position: absolute;
+            top: 35%;
+            width: 50px;
+            height: 50px;
+            background-color: $primary-color;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid $oushen-color;
+            opacity: .65;
+            font-size: 2rem;
+            color: #fff;
+        }
+    }   
+        .pull-right{
+            right: 5%;
+        }
+        .pull-left{
+            left: 5%;
+        }
+        img{
+            width: 100%;
+        }
+        .dot {
+            background-color: #eee;
+            border: 1px solid #666;
+            border-radius: 5px;
+            box-shadow: inset 1px 1px 1px #888;
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+        }
+        .dot.active {
+            background-color: #41ABE5;
+            box-shadow: inset 2px 0px 2px -2px #333;
+        }
+        .slick-dots{
+            text-align: center;
+            position: absolute;
+            top:535px;
+            left:-10px;
+            li{
+                display: inline-block;
+                font-size: 0;
+                list-style-type: none;
+                &.slick-active{
+                    button{
+                        background-color: $oushen-color;
+                        outline: none;
+                    }
+                }
+                button{
+                    border-radius: 50%;
+                    padding: 5px;
+                    margin-left: 10px;
+                    border: none;
+                    background-color: #fff;
+                }
+            }
+        }
+        .slick-prev:before, .slick-next:before{
+        content: '';
+        }
+}
+
+.dots-span{
+    margin-top: 35px;
+    background:#1f3243;
+    padding: 40px 80px 40px 40px;
+    font-size: 18px;
+    text-align: left;
+    p{
+        padding-left: 55px;
+        position: relative;
+        &::before{
+        content: '';
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-image: url('../img/check.png');
+        background-size: cover;
+        background-position: left;
+        position: absolute;
+        left: 0;
+        }
+    }
+}
+
+.quote{
+    position: relative;
+    padding: 100px 0 120px 0;
+    background: url('../img/led.png') no-repeat center;
+    background-size: cover;
+    .quote-block{
+        display: inline-block;
+        background-color: rgba(39,59,77,.5);
+        border-left: 2px solid $oushen-color;
+        padding: 30px 100px 30px 25px;
+        h2{
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-family: 'ProximaNova-Bold';
+            color: #fff;
+        }
+    }
+    &::before{
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+        content: '';
+        background-color: rgb(21, 54, 84);
+        opacity: 0.4;
+    }
+}
+
+.feedback{
+    padding: 70px 0 75px;
+    .servis-descr{
+        max-width: 1060px;
+        margin-bottom: 50px;
+        z-index: -1;
+    }
+}
+.slick-initialized .slick-slide{
+    outline: none;
+}
+.feed-item{
+    overflow: visible;
+    outline: none;
+    position: relative;
+    padding: 50px 25px 45px;
+    text-align: center;
+    border: 2px solid $border-color;
+    margin-top: 54px;
+    margin-right: 20px;
+    .img-wrap{
+        position: absolute;
+        bottom: 42%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        img{
+            z-index: 5;
+        }
+    }
+    h4{
+        color: $text-color;
+        font-size: 18px;
+    }
+    p{
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.feedback-carusel{
+    .slick-dots{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        button{
+            padding: 5px;
+            margin: 5px;
+            outline: none;
+            font-size: 0;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid $primary-color;
+        }
+        .slick-active button{
+            background-color: $oushen-color;
+            border: none;
+            outline: none;
+        }
+    }
+}
+
+.contact{
+    padding: 70px 0 100px;
+    position: relative;
+    background: rgb(40,63,86) url('../img/contact-bg.png') center center;
+    background-size: cover;
+    min-height: 745px;
+    color: #fff;
+    opacity: .75;
+    background-color: rgb(40,63,86);
+    .servis-descr{
+        h2{
+            color: #fff;
+        }
+        p{
+            font-size: 16px;
+            margin: 25px 0 35px;
+        }
+        p:last-child{
+            font-family: 'Proxima Nova Rg';
+            font-size: 22px;
+        }
+    }
+}
+
+form{
+    text-align: center;
+    input{
+        width: 100%;
+        padding: 10px 25px;
+        margin-bottom: 30px;
+        color: $text-color;
+        &:focus{
+            background-color: #ccc;
+        }
+    }
+    textarea{
+        width: 100%;
+        padding-left: 25px;
+        height: 144px;
+        color: $text-color;
+        margin-bottom: 40px;
+        &:focus{
+            background-color: #ccc;
+        }
+    }
+    .btn-form{
+        border: none;
+        color: #fff;
+        text-transform: uppercase;
+        display: inline-block;
+        width: 246px;
+        padding: 25px 0;
+        background-color: $primary-color;
+        opacity: 0.651;
+        border-bottom: 2px solid #1bdcd1;
+        transition: all .25s;
+        &:hover{
+            transform: scaleY(1.1);
+        }
+    }
+}
+
+.btn-scroll{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background-color: $primary-color;
+    bottom: 50px;
+    right: 50px;
+    border-bottom: 2px solid $oushen-color;
+    justify-content: center;
+    .fa-chevron-up{
+        text-align: center;
+        display: inline-block;
+        line-height: 48px;
+        vertical-align: middle;
+        font-size: 32px;
+    }
+    &:hover{
+        background-color: #17325F;
+        cursor: pointer;
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: $primary-color;
+    align-content: centert;
+    color: #fff;
+    .otakoyi{
+        text-align: center;
+        &-logo{
+            display: inline-block;
+            height: 25px;
+            width: 40px;
+            background-image: url('../img/otakoyi_logo_copyright.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            vertical-align: top;
+        }
+    }
+}
+
+
+@import "media";
